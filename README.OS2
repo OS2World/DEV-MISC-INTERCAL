@@ -1,0 +1,54 @@
+                         INTERCAL for OS/2
+
+When I first saw Visual Age COBOL, I knew that the time was right for
+a port of C-INTERCAL to the OS/2 platform.  So I did it.  Now to start
+on Visual Age INTERCAL, an idea the world is not yet ready for....
+
+In the mean time, for those of you who are seriously into intellectual
+self-flagellation, here is the C-INTERCAL compiler, as created by Eric
+S. Raymond as a weekend hack.  While the idea of actually implementing
+INTERCAL and foisting it upon an unsuspecting programming public may
+have it's detractors, INTERCAL's strangled syntax and semantics present
+a serious challenge to the compiler writer - Mr Raymond, my hat's off 
+to you! (then again, I don't _wear_ hats, but nevermind).
+
+A few notes on the OS/2 Implementation:
+
+0) The C-INTERCAL compiler, ick.exe, was compiled with the EMX development
+   system for OS/2, and requires the EMX runtime system to be installed in
+   order to run. 
+
+1) C-INTERCAL works by translating the INTERCAL (or TriINTERCAL) code to
+   C, and then compiling the C code.  The EMX port of GCC is the compiler
+   expected by ick.exe.  Therefore, you need to have the EMX/GCC C compiler
+   installed, as well as the EMX runtime, if you wish to use this package.
+   It would (probably) be possible to modify ick to use another compiler than
+   EMX - I have not done so, though. Ick also assumes that you have gcc in
+   your path - a reasonable assumption for a gcc install.
+
+2) Ick uses a C-skeleton, several include files, and a runtime library for
+   compilation and linking.  It also may use some system libraries written
+   in INTERCAL.  These are all found in the \lib directory off the main dir
+   after the distribution is unzipped.  The  following environment variables
+   should be set to point at this directory (no trailing slashes or back-
+   slashes), so that Ick can find these things:
+
+	ICKLIBDIR
+	ICKINCLUDEDIR
+
+   Yes, I know I could have had a single environmnet variable for this, but 
+   having two is more in keeping with the spirit of INTERCAL, generally.
+
+That should be it.  Just one more thing:
+
+   I CANNOT BE HELD RESPONSIBLE FOR ANY BRAIN DAMAGE OCCURRING DURING THE  
+   USE OF THE INTERCAL PROGRAMMING LANGUAGE, THE C-INTERCAL COMPILER (ICK),
+   OR ANY APPLICATION WRITTEN IN INTERCAL.  THIS SYSTEM MAY NOT BE USED FOR
+   NUCLEAR OR LIFE-CRITICAL REAL-TIME CONTROL APPLICATIONS, NOR MAY IT BE 
+   USED FOR ANY PURPOSE INVOLVED WITH THE PRODUCTION OF WEAPONS OF MASS
+   DESTRUCTION, WHETHER THEY BE NUCLEAR, BIOLOGICAL, CHEMICAL, ELECTRICAL,
+   MECHANICAL, OR OTHER.
+
+   THIS OS/2 PORT OF THE INTERCAL COMPILER IS RELEASED UNDER THE SAME 
+   RESTRICTIONS AS THE ORIGINAL SOURCE.  SEE THE FILE 'COPYING' FOR DETAILS.
+   

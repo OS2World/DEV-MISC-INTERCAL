@@ -1,0 +1,23 @@
+       OS/2 Upload Information Template for ftp-os2.nmsu.edu
+
+
+
+Archive Name: INTERCAL.ZIP
+
+Program Description: (keep it under 60 characters)
+
+OS/2 port of C-INTERCAL Compiler. Requires EMX Runtime, EMX/GCC C Compiler 
+
+Operating System Versions: OS/2 Warp
+
+Program Source: Included
+
+Replaces: INTERCAL.ZIP - fixes minor bugs
+
+Your name: Derek J Decker
+
+Your email address: derek@decker.net
+
+
+
+Proposed directory for placement: ftp://hobbes.nmsu.edu/pub/os2/dev/emx/v0.9c/
